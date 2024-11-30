@@ -5,4 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://frankausberlin.github.io',
                 'git_url': 'https://github.com/frankausberlin/lazystudent',
                 'lib_path': 'lazystudent'},
-  'syms': {'lazystudent.core': {'lazystudent.core.foo': ('core.html#foo', 'lazystudent/core.py')}}}
+  'syms': {'lazystudent.core': {'lazystudent.core.foo': ('yamler.html#foo', 'lazystudent/core.py')}}}
