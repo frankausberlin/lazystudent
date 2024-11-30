@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "lazystudent"
+  site-url: "https://frankausberlin.github.io/lazystudent"
+  description: "Yaml-based youtube transkript prompter"
+  repo-branch: main
+  repo-url: "https://github.com/frankausberlin/lazystudent"
