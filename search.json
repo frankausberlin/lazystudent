@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "yamler.html",
+    "href": "yamler.html",
+    "title": "Yamler",
+    "section": "",
+    "text": "source\n\nYamler\n\n Yamler (root='yamler', id_len=11, onInit={'config': False, 'files':\n         False, 'data': False}, mediator=None)\n\nset workingfolder, scan for yamls, load main yamls and build data object\n\n#big test\n!rm -rf yemler/; mkdir yemler; mkdir yemler/mathpl\n!echo \"test: 'hallo'\" &gt; yemler/01234567890.yml\n!echo \"test2: 'hallo2'\" &gt; yemler/01234567890_loop.yml\n!echo \"test3: 'hallo3'\" &gt; yemler/__info.yml\n!echo \"test4: 'hallo4'\" &gt; yemler/01234567890_de.yml\n!echo \"test: 'hallo'\" &gt; yemler/11234567890.yml\n!echo \"test2: 'hallo2'\" &gt; yemler/11234567890_loop.yml\n\n!echo \"test: 'hallo'\" &gt; yemler/mathpl/x1234567890.yml\n!echo \"test2: 'hallo2'\" &gt; yemler/mathpl/x1234567890_loop.yml\n!echo \"test3: 'hallo3'\" &gt; yemler/mathpl/__readme.yml\n!echo \"test4: 'hallo4'\" &gt; yemler/mathpl/x1234567890_de.yml\n!echo \"test: 'hallo'\" &gt; yemler/mathpl/x2234567890.yml\n!echo \"test2: 'hallo2'\" &gt; yemler/mathpl/x2234567890_loop.yml\n\ny = Yamler (root='yemler')\ny.activate()\n# conf\ny.data['01234567890']['_']['test'] += ' welta'\ny.data['01234567890']['loop']['test2'] += ' weltb'\ny.data['01234567890']['de']['test4'] += ' weltc'\ny.config['info']['test3'] += ' weltd'\ny.data['11234567890']['_']['test'] += ' weltx'\ny.data['11234567890']['loop']['test2'] += ' weltb'\ny.dump ()\n\ny.activate ('mathpl')\ny.data['x1234567890']['loop']['test2'] += ' weltx'\ny.data['x1234567890']['de']['test4'] += ' weltx'\ny.data['x1234567890']['_']['test'] += ' weltx'\ny.data['x2234567890']['_']['test'] += ' weltx'\ny.config['readme']['test3'] += ' weltx'\ny.dump ()\n\n\nprint ('root:')\n!cat yemler/01234567890.yml yemler/01234567890_loop.yml yemler/__conf.yml yemler/01234567890_de.yml yemler/11234567890.yml yemler/11234567890_loop.yml\nprint ('topic matpl:')\n!cat yemler/mathpl/x1234567890.yml yemler/mathpl/x1234567890_loop.yml yemler/mathpl/__cunf.yml yemler/mathpl/x1234567890_de.yml yemler/mathpl/x2234567890.yml yemler/mathpl/x2234567890_loop.yml\n\nroot:\ntest: hallo welta\ntest2: hallo2 weltb\ncat: yemler/__conf.yml: No such file or directory\ntest4: hallo4 weltc\ntest: hallo weltx\ntest2: hallo2 weltb\ntopic matpl:\ntest: hallo weltx\ntest2: hallo2 weltx\ncat: yemler/mathpl/__cunf.yml: No such file or directory\ntest4: hallo4 weltx\ntest: hallo weltx\ntest2: 'hallo2'",
+    "crumbs": [
+      "<font size='+2' color='#005F6A'>**Yamler**</font>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "lazystudent",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "lazystudent"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "lazystudent",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall lazystudent in Development mode\n# make sure lazystudent package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to lazystudent\n$ nbdev_prepare",
+    "crumbs": [
+      "lazystudent"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "lazystudent",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/frankausberlin/lazystudent.git\nor from conda\n$ conda install -c frankausberlin lazystudent\nor from pypi\n$ pip install lazystudent\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "lazystudent"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "lazystudent",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "lazystudent"
+    ]
+  }
+]
